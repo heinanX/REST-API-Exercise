@@ -1,0 +1,50 @@
+[
+    {
+        "Title": "You Don't Have To Say You Love Me",
+        "Artist": "Dusty Springfield",
+        "Year": 1966,
+        "Genre": "Pop"
+    },
+    {
+        "Title": "Linger",
+        "Artist": "The Cranberries",
+        "Year": 1993,
+        "Genre": ["Indie", "Rock", "Alternative"]
+        },
+    {
+        "Title": "California Dreamin'",
+        "Artist": "The Mamas & The Papas",
+        "Year": 1965,
+        "Genre": ["Indie", "Folk rock", "Pop"]
+    },
+    {
+        "Title": "Check Yes Juliet",
+        "Artist": "We the Kings",
+        "Year": 2007,
+        "Genre": ["Indie", "Alternative"]
+    },
+    {
+        "Title": "The Beginning",
+        "Artist": "One Ok Rock",
+        "Year": 2013,
+        "Genre": ["Indie", "Rock"]
+    },
+    {
+        "Title": "Summertime",
+        "Artist": "My Chemical Romande",
+        "Year": 2010,
+        "Genre": ["Indie", "Rock", "Alternative"]
+    },
+    {
+        "Title": "SELF-SABOTAGE",
+        "Artist": ["Waterparks", "Good Charlotte"],
+        "Year": 2022,
+        "Genre": ["Indie", "Alternative"]
+    },
+    {
+        "Title": "How Do I Say Goodbye",
+        "Artist": "Dean Lewis",
+        "Year": 2022,
+        "Genre": ["Indie", "Pop"]
+    }
+]
