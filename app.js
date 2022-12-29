@@ -1,14 +1,15 @@
-async function getSongs() {
-    
-    try {
-        console.log("Hello");
-        const response = await fetch("./songs.json");
-        console.log("Hello 2");
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.log("There was an error loading songs. Sorry.");
-    }
-}
+let express = require('express');
+const app = express();
+let fs = require('fs')
 
-getSongs();
+app.use(express.json())
+
+app.get('/songs', (req, res) =>
+    res.status(200).send(
+        /* "Here are my songs" */
+        fs.readFile('songs.json', 'utf8', (err, data) => {
+            console.log(data.toString())
+        })
+))
+
+app.listen(2800, () => console. log('server is up localhost:2800/songs'));
