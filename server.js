@@ -18,3 +18,22 @@ app.get('/songs', (req, res) => {
        return;
     })
 })
+
+app.get('/songs/:songId', (req, res) => {
+
+    let showSong = req.params.songId
+
+    fs.readFile('songs.json', (err, data) => {
+       if (err) {
+        console.log('error 404')
+       }
+       const songs = JSON.parse(data)
+
+       songs.forEach(element => {
+        if (element.id == showSong) {
+            res.send(element)
+        }
+       })
+
+    })
+})
