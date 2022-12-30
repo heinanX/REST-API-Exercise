@@ -114,3 +114,24 @@ app.post('/song', (req, res) => {
       
     });
 });
+
+app.delete('/song/:songId', (req, res) => {
+    fs.readFile("songs.json",  (err, data) => {
+  
+      if (err) {res.status(404).send("404 - could not read file")}
+  
+      const songs = JSON.parse(data);
+      const id = req.params.songId;
+      const newId = JSON.parse(id);
+  
+      let found = songs.findIndex(item => item.id === newId)
+      songs.splice(found, 1)
+  
+      fs.writeFile('songs.json', JSON.stringify(songs, null, 2), (err) => {
+        if (err) { }
+      })
+      res.status(200).send(songs)
+    })
+  
+  
+  })
