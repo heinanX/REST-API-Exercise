@@ -10,3 +10,6 @@ POST http://localhost:3000/song
 
 ###
 
+PUT http://localhost:3000/song/2
+
+###

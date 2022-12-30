@@ -73,3 +73,44 @@ app.post('/song', (req, res) => {
         return
     })
   })
+
+  app.put('/song/:songId', (req, res) => {
+
+    fs.readFile("songs.json",  (err, data) => {
+
+      if (err) {
+        res.status(404).send(err)
+      }
+
+      const songs = JSON.parse(data)
+      const id = req.params.songId;
+
+      songs.map(item => {
+        const songId = JSON.stringify(item.id)
+        if (songId === id) {
+
+          const newArr = songs.map(makeTheChanges)
+          function makeTheChanges(item) {
+  
+            if (item.id == id) {
+              return { ...item, artist: "Kansas" }
+            }
+  
+            return item;
+  
+          }
+
+          fs.writeFile("songs.json", JSON.stringify(newArr, null, 2), function (err) {
+            
+            if (err) {"404 Error - could not overwrite file"}
+
+          })
+
+          res.status(200).json(newArr)
+
+          return
+        }
+      })
+      
+    });
+});
