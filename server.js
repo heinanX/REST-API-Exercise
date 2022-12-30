@@ -4,7 +4,7 @@ const app = express();
 const fs = require('fs');
 
 // ----- STARTS THE SERVER
-app.listen(3000, () => {console.log('Servern är igång. Eller...')})
+app.listen(3000, () => {console.log('Servern is up and running at http://localhost:3000/songs')})
 
 
 // ----- Collects data from json file
@@ -47,24 +47,36 @@ app.get('/songs/:songId', (req, res) => {
 app.post('/songs', (req, res) => {
  
     fs.readFile('songs.json',  (err, data) => {
-      if (err) {
+        if (err) {
         res.status(404).send('404 Error')
-      }
+        }
 
-      const songs = JSON.parse(data)
+        const songs = JSON.parse(data)
       
-      // Generate an id number depending on array length.
-      function makeCounter() {
-        let songId = songs.length +1
-        return songId++;
-      }
+        //---------  Generate an id number.
+    
+        async function createId() {
+            let num = Math.floor(Math.random() * 10000000)
+            console.log(num)
+        
+             songs.forEach(element => {
+                let ids = element.id
+                if (num === ids) {
+                    console.log("noo")
+                createId()
+            } else { 
+                console.log("works so far")
+                return num
+            }
+        })
+    }
       // ------------------------------
 
       let newSong =    
         {
           "title": "Oops! I Did It Again",
           "artist": "Britney Spears",
-          "id": makeCounter()
+          "id": createId()
         }
         
         songs.push(newSong)
