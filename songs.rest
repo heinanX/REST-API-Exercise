@@ -1,17 +1,17 @@
-GET http://localhost:3000/song
+GET http://localhost:3000/songs
 
 ###
 
-GET http://localhost:3000/song/3
+GET http://localhost:3000/songs/3
 
 ###
 
-POST http://localhost:3000/song
+POST http://localhost:3000/songs
 
 ###
 
-PUT http://localhost:3000/song/2
+PUT http://localhost:3000/songs/2
 
 ###
 
-DELETE http://localhost:3000/song/1
+DELETE http://localhost:3000/songs/9

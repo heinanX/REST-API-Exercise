@@ -1,58 +1,85 @@
 [
-    {
-        "Title": "You Don't Have To Say You Love Me",
-        "Artist": "Dusty Springfield",
-        "Year": 1966,
-        "Genre": "Pop",
-        "id": 1
-    },
-    {
-        "Title": "Linger",
-        "Artist": "The Cranberries",
-        "Year": 1993,
-        "Genre": ["Indie", "Rock", "Alternative"],
-        "id": 2
-        },
-    {
-        "Title": "California Dreamin'",
-        "Artist": "The Mamas & The Papas",
-        "Year": 1965,
-        "Genre": ["Indie", "Folk rock", "Pop"],
-        "id": 3
-    },
-    {
-        "Title": "Check Yes Juliet",
-        "Artist": "We the Kings",
-        "Year": 2007,
-        "Genre": ["Indie", "Alternative"],
-        "id": 4
-    },
-    {
-        "Title": "The Beginning",
-        "Artist": "One Ok Rock",
-        "Year": 2013,
-        "Genre": ["Indie", "Rock"],
-        "id": 5
-    },
-    {
-        "Title": "Summertime",
-        "Artist": "My Chemical Romande",
-        "Year": 2010,
-        "Genre": ["Indie", "Rock", "Alternative"],
-        "id": 6
-    },
-    {
-        "Title": "SELF-SABOTAGE",
-        "Artist": ["Waterparks", "Good Charlotte"],
-        "Year": 2022,
-        "Genre": ["Indie", "Alternative"],
-        "id": 7
-    },
-    {
-        "Title": "How Do I Say Goodbye",
-        "Artist": "Dean Lewis",
-        "Year": 2022,
-        "Genre": ["Indie", "Pop"],
-        "id": 8
-    }
+  {
+    "Title": "You Don't Have To Say You Love Me",
+    "Artist": "Dusty Springfield",
+    "Year": 1966,
+    "Genre": "Pop",
+    "id": 1
+  },
+  {
+    "Title": "Linger",
+    "Artist": "The Cranberries",
+    "Year": 1993,
+    "Genre": [
+      "Indie",
+      "Rock",
+      "Alternative"
+    ],
+    "id": 2
+  },
+  {
+    "Title": "California Dreamin'",
+    "Artist": "The Mamas & The Papas",
+    "Year": 1965,
+    "Genre": [
+      "Indie",
+      "Folk rock",
+      "Pop"
+    ],
+    "id": 3
+  },
+  {
+    "Title": "Check Yes Juliet",
+    "Artist": "We the Kings",
+    "Year": 2007,
+    "Genre": [
+      "Indie",
+      "Alternative"
+    ],
+    "id": 4
+  },
+  {
+    "Title": "The Beginning",
+    "Artist": "One Ok Rock",
+    "Year": 2013,
+    "Genre": [
+      "Indie",
+      "Rock"
+    ],
+    "id": 5
+  },
+  {
+    "Title": "Summertime",
+    "Artist": "My Chemical Romande",
+    "Year": 2010,
+    "Genre": [
+      "Indie",
+      "Rock",
+      "Alternative"
+    ],
+    "id": 6
+  },
+  {
+    "Title": "SELF-SABOTAGE",
+    "Artist": [
+      "Waterparks",
+      "Good Charlotte"
+    ],
+    "Year": 2022,
+    "Genre": [
+      "Indie",
+      "Alternative"
+    ],
+    "id": 7
+  },
+  {
+    "Title": "How Do I Say Goodbye",
+    "Artist": "Dean Lewis",
+    "Year": 2022,
+    "Genre": [
+      "Indie",
+      "Pop"
+    ],
+    "id": 8
+  }
 ]
