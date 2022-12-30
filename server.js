@@ -37,3 +37,39 @@ app.get('/songs/:songId', (req, res) => {
 
     })
 })
+
+app.post('/song', (req, res) => {
+ 
+    fs.readFile('songs.json',  (err, data) => {
+      if (err) {
+        res.status(404).send('404 Error')
+      }
+
+      const songs = JSON.parse(data)
+      
+      // Generate an id number depending on array length.
+      function makeCounter() {
+        let songId = songs.length +1
+        return songId++;
+      }
+      // ------------------------------
+
+      let newSong =    
+        {
+          "title": "Oops! I Did It Again",
+          "artist": "Britney Spears",
+          "id": makeCounter()
+        }
+        
+        songs.push(newSong)
+
+        fs.writeFile("songs.json", JSON.stringify(songs, null, 2), function(err) {
+          if(err) {
+            console.log(err)
+          }
+        } )
+
+        res.status(201).json(songs)
+        return
+    })
+  })

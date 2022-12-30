@@ -6,3 +6,7 @@ GET http://localhost:3000/song/3
 
 ###
 
+POST http://localhost:3000/song
+
+###
+
