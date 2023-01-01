@@ -47,29 +47,30 @@ app.get('/songs/:songId', (req, res) => {
 app.post('/songs', (req, res) => {
  
     fs.readFile('songs.json',  (err, data) => {
-        if (err) {
-        res.status(404).send('404 Error')
-        }
+      if (err) {
+      res.status(404).send('404 Error')
+      }
 
-        const songs = JSON.parse(data)
+      const songs = JSON.parse(data)
       
         //---------  Generate an id number.
     
-        async function createId() {
-            let num = Math.floor(Math.random() * 10000000)
-            console.log(num)
-        
-             songs.forEach(element => {
-                let ids = element.id
-                if (num === ids) {
-                    console.log("noo")
-                createId()
-            } else { 
-                console.log("works so far")
-                return num
+      function createId() {
+        let num = Math.floor(Math.random() * 10000000)
+        console.log(num)
+    
+        songs.forEach(element => {
+            let ids = element.id
+            if (num === ids) {
+              console.log("noo")
+              createId()
+            } else {
+              return num
+              
             }
+          
         })
-    }
+      }
       // ------------------------------
 
       let newSong =    

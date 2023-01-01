@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    width: 15rem;
+    height: 100vh;
+}
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 1rem;
+}
+
+label {
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+div{
+    margin-bottom: 2rem;
+}
+
+.one {
+    margin-top: 2rem;
+}
+
+input {
+    height: 2rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: rgb(213, 230, 237);
+    padding: 0 1rem 0 1rem;
+}
+
+main {
+    margin-left: 2rem;
+}
