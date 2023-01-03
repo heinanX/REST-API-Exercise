@@ -24,12 +24,12 @@ label {
     margin: 0.5rem 0 0.5rem 0;
 }
 
-div{
+.margin{
     margin-bottom: 2rem;
 }
 
 .one {
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 input {
@@ -40,7 +40,45 @@ input {
     background-color: rgb(213, 230, 237);
     padding: 0 1rem 0 1rem;
 }
+.chooseUpdate {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.dropdown {
+    height: 2rem;
+}
+
+.shrink {
+    width: 7.5rem;
+}
+
+/* ----------------------------------------------------------- */
 
 main {
     margin-left: 2rem;
+
+}
+
+.displayAll-ol {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.li {
+    margin-bottom: 1rem;
+}
+
+.allSongs {
+    box-sizing: content-box;
+
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    background-color: rgb(30, 70, 93);
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 1rem;
+    color: rgb(22, 191, 191);
 }

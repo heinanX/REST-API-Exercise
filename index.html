@@ -11,35 +11,52 @@
 </head>
 <body>
     <aside>
-        <div class="centered one">
+        <div class="centered one, margin">
             <label for="">Look up random song:</label>
-            <button>Randomise</button>
+            <button onclick="displayRandom()">Randomise</button>
         </div>
 
-        <div class="centered two">
-            <label for="">Reveal full directory</label>
-            <button>Reveal all</button>
+        <div class="centered two, margin">
+            <label for="">Display full directory</label>
+            <button onclick="displayAll()">Display all</button>
         </div>
 
-        <div class="centered three">
+        <div class="centered three, margin">
             <label for="">Delete song from list</label>
-            <input type="text">
+            <input type="text" placeholder="Enter Song ID">
             <button>I banish tee!</button>
         </div>
 
-        <div class="centered four">
+        <div class="centered four, margin">
             <label for="">Add song to list</label>
+            <input type="text" placeholder="Enter Title">
+            <input type="text" placeholder="Enter Artist">
+            <input type="text" placeholder="Enter Year">
+            <input type="text" placeholder="Enter Genre">
             <button>Add the best song ever</button>
         </div>
 
-        <div class="centered five">
+        <div class="centered five, margin">
             <label for="">Update song</label>
+            <div class="chooseUpdate">
+                <tr>
+                <td>
+                <select name="operator" class="dropdown">
+                <option>Title</option>
+                <option>Artist</option>
+                <option>Year</option>
+                <option>Genre</option>
+                <option>Id</option>
+                </select></td>
+                </tr>
+                <input type="text" placeholder="Enter Genre" class="shrink">
+            </div>
             <button>This just in!</button>
         </div>
     </aside>
 
     <main>
-        <div><h1>hello</h1>
+        <div class="allSongs"><h1></h1>
         </div>
     </main>
 </body>

@@ -1,7 +1,12 @@
 const { log } = require('console');
 const express = require('express');
+const cors = require('cors');
+
 const app = express();
 const fs = require('fs');
+const cors2 = cors()
+
+app.use(cors())
 
 //--------- STARTS SERVER ---------\\
 

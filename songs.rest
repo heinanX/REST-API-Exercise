@@ -2,7 +2,7 @@ GET http://localhost:3000/songs
 
 ###
 
-GET http://localhost:3000/songs/2373
+GET http://localhost:3000/songs/5555
 
 ###
 
@@ -10,8 +10,8 @@ POST http://localhost:3000/songs
 
 ###
 
-PUT http://localhost:3000/songs/11
+PUT http://localhost:3000/songs/1210972
 
 ###
 
-DELETE http://localhost:3000/songs/1
+DELETE http://localhost:3000/songs/1210972
