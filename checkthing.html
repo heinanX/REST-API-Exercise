@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const arr = [
+{"Title": "The Beginning",
+    "id": 1},
+
+{"Title": "Summertime",
+    "id": 4},
+
+{"Title": "SELF-SABOTAGE",
+    "id": 5},
+
+{"Title": "How Do I Say Goodbye",
+    "id": 9}]
+// ------------------- array
+
+
+function generateId() {
+    return Math.floor(Math.random() * 10000000)
+}
+
+function check() {
+    let num = generateId()
+    console.log(num)
+    
+    arr.forEach(element => {
+        let ids = element.id
+        if (num === ids) {
+            check()
+        } else {
+            return num
+        }
+    })
+}
+check()
+
+/* songs.map(item => item.id ===) */
+
+/* arr.forEach(element => {
+    function checkId() {
+        // generates an ID
+        let num = generateId();
+
+        if (! num === element.id) {
+        return num;
+    } else {
+        checkId()
+    }
+    }
+    checkId()
+    }) */
+    </script>
+</body>
+</html>

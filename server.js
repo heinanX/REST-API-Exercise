@@ -3,162 +3,147 @@ const express = require('express');
 const app = express();
 const fs = require('fs');
 
-// ----- STARTS THE SERVER
-app.listen(3000, () => {console.log('Servern is up and running at http://localhost:3000/songs')})
+//--------- STARTS SERVER ---------\\
+
+app.listen(3000, () => { console.log('Servern is up and running at http://localhost:3000/songs') });
 
 
-// ----- Collects data from json file
+//--------- Collects data from json file ---------\\
 
 app.get('/songs', (req, res) => {
 
-    fs.readFile('songs.json', (err, data) => {
-       if (err) {
-        console.log('error 404')
-       }
+  fs.readFile('songs.json', (err, data) => {
+    if (err) { res.status(404).send(`Unable to read source file. See ${err}`) }
 
-       const songs = JSON.parse(data)
-       res.send(songs)
-       return;
-    })
+    const songs = JSON.parse(data)
+    res.status(200).send(songs)
+  })
+
 })
 
-// ----- Collects specified object from json file
+//--------- Collects specified object from json file ---------\\
 
 app.get('/songs/:songId', (req, res) => {
 
+  fs.readFile('songs.json', (err, data) => {
+    if (err) { res.status(404).send(`Unable to read source file. See ${err}`) }
+
+    const songs = JSON.parse(data)
     let showSong = req.params.songId
+    let song = songs.find(element => element.id == showSong)
 
-    fs.readFile('songs.json', (err, data) => {
-       if (err) {
-        console.log('error 404')
-       }
-       const songs = JSON.parse(data)
+    if (song) {
+      res.status(200).send(song);
+    } else {
+        res.status(404).send(`Cannot find id: ${showSong}`);
+      }
+  })
 
-       songs.forEach(element => {
-        if (element.id == showSong) {
-            res.send(element)
-        }
-       })
-
-    })
 })
 
-// ----- Creates new object in json file
+//--------- Creates new object in json file  ---------\\
+
 app.post('/songs', (req, res) => {
- 
-    fs.readFile('songs.json',  (err, data) => {
-      if (err) {
-      res.status(404).send('404 Error')
-      }
 
-      const songs = JSON.parse(data)
-      
-        //---------  Generate an id number.
-    
-      function createId() {
-        let num = Math.floor(Math.random() * 10000000)
-        console.log(num)
-    
-        songs.forEach(element => {
-            let ids = element.id
-            if (num === ids) {
-              console.log("noo")
-              createId()
-            } else {
-              return num
-              
-            }
-          
-        })
-      }
-      // ------------------------------
+  fs.readFile('songs.json', (err, data) => {
+    if (err) { res.status(404).send(`Unable to read source file. See ${err}`) }
 
-      let newSong =    
-        {
-          "title": "Oops! I Did It Again",
-          "artist": "Britney Spears",
-          "id": createId()
+    const songs = JSON.parse(data);
+
+    //----  Generate an id number  ----\\
+
+    function createId() {
+      let num = Math.floor(Math.random() * 10000000);
+
+      if (!(songs.find(element => element.id == num))) {
+        return num; 
+      } else {
+          createId()
         }
-        
-        songs.push(newSong)
+    }
 
-        fs.writeFile("songs.json", JSON.stringify(songs, null, 2), function(err) {
-          if(err) {
-            console.log(err)
-          }
-        } )
+    //---- Creates new object in array ----\\
 
-        res.status(201).json(songs)
-        return
+    let newSong =
+    {
+      "Title": "Oops! I Did It Again",
+      "Artist": "Britney Spears",
+      "Year": 1999,
+      "Genre": "pop",
+      "id": createId()
+    }
+
+    //---- Pushes new object to songs array ----\\
+
+    songs.push(newSong);
+
+    //---- Overwrites json file with updated array ----\\
+
+    fs.writeFile('songs.json', JSON.stringify(songs, null, 2), function (err) {
+      if (err) { res.status(404).send(`Unable to write file. See ${err}`) }
     })
+    res.status(201).json(songs);
   })
 
-  // ----- Updates specified product inside object in json file
+})
 
-  app.put('/songs/:songId', (req, res) => {
+//--------- Updates specified product inside object in json file ---------\\
 
-    fs.readFile("songs.json",  (err, data) => {
+app.put('/songs/:songId', (req, res) => {
 
-      if (err) {
-        res.status(404).send(err)
-      }
+  fs.readFile('songs.json', (err, data) => {
+    if (err) { res.status(404).send(`Unable to read source file. See ${err}`) }
 
-      const songs = JSON.parse(data)
-      const id = req.params.songId;
+    const songs = JSON.parse(data);
+    const id = req.params.songId;
+    let song = songs.find(element => element.id == id);
 
-      songs.map(item => {
-        const songId = JSON.stringify(item.id)
-        if (songId === id) {
+    if (song) {
+      const newArr = songs.map(item => {
+        if (item.id == id) {
+          return { ...item, Artist: 'THIS IS REPLACEMENT TEXT 2' }
+        } return item;
+      });
 
-          const newArr = songs.map(makeTheChanges)
-          function makeTheChanges(item) {
-  
-            if (item.id == id) {
-              return { ...item, artist: "Kansas" }
-            }
-  
-            return item;
-  
-          }
+      fs.writeFile('songs.json', JSON.stringify(newArr, null, 2), function (err) {
+        if (err) { res.status(404).send('Cannot overwrite file') }
+      });
 
-          fs.writeFile("songs.json", JSON.stringify(newArr, null, 2), function (err) {
-            
-            if (err) {"404 Error - could not overwrite file"}
+      res.status(200).json(newArr);
 
-          })
+    } else {
+      res.status(404).send('Unknown ID.');
+    }
+  });
 
-          res.status(200).json(newArr)
-
-          return
-        }
-      })
-      
-    });
 });
 
-// ----- Deletes specified object from json file
+//--------- Deletes specified object from json file ---------\\
 
 app.delete('/songs/:songId', (req, res) => {
-    fs.readFile("songs.json",  (err, data) => {
-  
-      if (err) {res.status(404).send("404 - could not read file")}
-  
-      // ----- array parser and collector of id and parser of id
-      const songs = JSON.parse(data);
-      const id = req.params.songId;
-      const newId = JSON.parse(id);
 
-      // ----- goes through songs array and locates specified array id by comparing song id with requested id.
-      // ----- it then uses that position to delete specified item.
-  
-      let found = songs.findIndex(item => item.id === newId)
+  fs.readFile('songs.json', (err, data) => {
+  if (err) { res.status(404).send(`Unable to read source file. See ${err}`) }
+
+    //---- array parser and collector of id and parser of id ----\\
+
+    const songs = JSON.parse(data);
+    const id = req.params.songId;
+
+    //---- goes through songs array and locates specified array id by comparing song id with requested id. ----\\
+
+    let found = songs.findIndex(item => item.id == id)
+    
+    //---- if not assigned an id  ----\\
+    if (!(found === -1)) {
       songs.splice(found, 1)
 
-      // ----- old array is written over with modified array
-  
       fs.writeFile('songs.json', JSON.stringify(songs, null, 2), (err) => {
-        if (err) { }
+        if (err) { res.status(404).send('404 Error - could not overwrite file') }
       })
       res.status(200).send(songs)
-    })
+
+    } else { res.status(404).send('Unknown ID') }
+
   })
+})
