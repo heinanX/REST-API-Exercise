@@ -4,7 +4,6 @@ const cors = require('cors');
 
 const app = express();
 const fs = require('fs');
-const cors2 = cors()
 
 app.use(cors())
 

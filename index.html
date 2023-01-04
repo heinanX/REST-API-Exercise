@@ -11,32 +11,42 @@
 </head>
 <body>
     <aside>
-        <div class="centered one, margin">
-            <label for="">Look up random song:</label>
-            <button onclick="displayRandom()">Randomise</button>
+        <div class="centered one margin odd">
+            <label for="">Display full directory or random:</label>
+            <div class="sqre">
+                <button class="sqre-btn"  onclick="displayAll()">Display all</button>
+                <br>
+                <button class="sqre-btn" onclick="displayRandom()">Randomise</button>
+            </div>
         </div>
 
-        <div class="centered two, margin">
-            <label for="">Display full directory</label>
-            <button onclick="displayAll()">Display all</button>
+        <div class="centered two margin odd">
+            <label for="">Look up by ID:</label>
+            <input id="displayID" type="text" placeholder="Enter Song ID">
+            <div class="sqre">
+                <button class="sqre-btn" onclick="displayID()">Look for song</button>
+                <button class="sqre-btn" onclick="lookUpID()">Look for ID</button>
+            </div>
         </div>
 
-        <div class="centered three, margin">
+        <div class="centered three margin odd">
             <label for="">Delete song from list</label>
-            <input type="text" placeholder="Enter Song ID">
-            <button>I banish tee!</button>
+            <input id="deleteID"type="text" placeholder="Enter Song ID">
+            <button onclick="deleteID()">I banish tee!</button>
         </div>
 
-        <div class="centered four, margin">
+
+        <div class="centered four margin odd">
             <label for="">Add song to list</label>
-            <input type="text" placeholder="Enter Title">
-            <input type="text" placeholder="Enter Artist">
-            <input type="text" placeholder="Enter Year">
-            <input type="text" placeholder="Enter Genre">
+            <input id="createID--title"type="text" placeholder="Enter Title">
+            <input id="createID--artist"type="text" placeholder="Enter Artist">
+            <input id="createeID--year"type="text" placeholder="Enter Year">
+            <input id="createID---genre"type="text" placeholder="Enter Genre">
             <button>Add the best song ever</button>
         </div>
 
-        <div class="centered five, margin">
+
+        <div class="centered five margin odd">
             <label for="">Update song</label>
             <div class="chooseUpdate">
                 <tr>
@@ -56,7 +66,22 @@
     </aside>
 
     <main>
+        <h1 class="mainHeader">List of Ultimate Songs:</h1>
+
         <div class="allSongs"><h1></h1>
+            <table class="songTable">
+                <thead class="thead">
+                    <tr class="tr--head">
+                        <th class="th--styling">id:</th>
+                        <th class="th--styling">Artist:</th>
+                        <th class="th--styling">Title:</th>
+                        <th class="th--styling">Year:</th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+
+                </tbody>
+            </table>
         </div>
     </main>
 </body>

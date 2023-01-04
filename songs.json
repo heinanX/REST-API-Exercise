@@ -83,8 +83,10 @@
     "id": 2839208
   },
   {
-    "title": "Oops! I Did It Again",
-    "artist": "Britney Spears",
+    "Title": "Oops! ...I Did It Again",
+    "Artist": "Britney Spears",
+    "Year": 2000,
+    "Genre": "Pop",
     "id": 8219617
   }
 ]
