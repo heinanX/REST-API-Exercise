@@ -11,73 +11,53 @@
 </head>
 <body>
     <aside>
-        <div class="centered one margin odd">
+        <h4 class="aside--h4">List of</h4>
+        <h1 class="aside--h1">Ultimate Songs</h1>
+        <h1 class="aside--h1">of All Time</h1>
+
+        <div class="centered top--div margin aside--div">
             <label for="">Display full directory or random:</label>
-            <div class="sqre">
+            <div class="btn--container">
                 <button class="sqre-btn"  onclick="displayAll()">Display all</button>
                 <br>
                 <button class="sqre-btn" onclick="displayRandom()">Randomise</button>
             </div>
         </div>
 
-        <div class="centered two margin odd">
+        <div class="centered margin aside--div">
             <label for="">Look up by ID or Artist:</label>
             <input id="displayID" type="text" placeholder="Enter Song ID or Artist">
-            <div class="sqre">
+            <div class="btn--container">
                 <button class="sqre-btn" onclick="displayID()">Search ID</button>
                 <button class="sqre-btn" onclick="lookUpID()">Search Arist</button>
             </div>
         </div>
 
-        <div class="centered three margin odd">
+        <div class="centered margin aside--div">
             <label for="">Delete song from list</label>
             <input id="deleteID" type="text" placeholder="Enter Song ID">
             <button type="button" onclick="deleteID()">I banish thee!</button>
         </div>
 
 
-        <div class="centered four margin odd">
+        <div class="centered margin aside--div">
             <label for="">Add song to list</label>
             <input id="createID--title"type="text" placeholder="Enter Title">
             <input id="createID--artist"type="text" placeholder="Enter Artist">
             <input id="createID--year"type="text" placeholder="Enter Year">
             <button onclick="createID()">Add the best song ever</button>
         </div>
-<!-- 
-
-        <div class="centered five margin odd">
-            <label for="">Edit song</label>
-            <div class="chooseUpdate">
-                <p>Hello</p>
-            </div>
-            <button>This just in!</button>
-        </div> -->
     </aside>
-
     <main>
-        <h1 class="mainHeader">List of Ultimate Songs:</h1>
-
-        <div class="allSongs"><h1></h1>
+        <div class="allSongs">
 
             <div class="header">
                 <p class="td--id">ID:</p>
-                <p class="td--artist">Title:</p>
-                <p class="td--title">Artist:</p>
+                <p class="td--artist">Artist:</p>
+                <p class="td--title">Title:</p>
                 <p class="td--year">Year:</p>
             </div>
-<!--             <table class="songTable">
-                <thead class="thead">
-                    <tr class="tr--head">
-                        <th class="th--styling">id:</th>
-                        <th class="th--styling">Artist:</th>
-                        <th class="th--styling">Title:</th>
-                        <th class="th--styling">Year:</th>
-                    </tr>
-                </thead>
-                <tbody class="tbody">
 
-                </tbody>
-            </table> -->
         </div>
     </main>
 </body>

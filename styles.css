@@ -1,9 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-/*     font-family: 'Courier New', Courier, monospace;
-    font-weight: 700; */
 }
+
 body {
     display: flex;
     flex-direction: row;
@@ -12,17 +11,29 @@ body {
 
 aside {
     width: 18rem;
+    height: 100vh;
 
     display: flex;
+    position: fixed;
     flex-direction: column;
     align-items: center;
-/*     background-color: rgb(78, 156, 156); */
-    background-color: rgb(22, 191, 191);
-    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(13, 31, 42);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
+    color:yellow;
 }
 
-.one {
-margin-top: 1rem;
+.aside--h4 {
+    color: rgb(22, 191, 191);
+    margin-top: 1rem;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.aside--h1 {
+    color: rgb(22, 191, 191);
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .centered {
@@ -32,15 +43,14 @@ margin-top: 1rem;
     width: 14rem;
 }
 
-.odd:nth-child(odd) {
-    background-color: rgb(240, 253, 253);
-    padding: 0 0.5rem 1rem 0.5rem;
-    border-radius: 5px;
-
+.top--div {
+margin-top: 1rem;
 }
-.odd:nth-child(even) {
-    background-color: rgb(255, 255, 255);
+
+.aside--div {
+    background-color: rgb(12, 155, 155);
     padding: 0 0.5rem 1rem 0.5rem;
+    margin-bottom: 1rem;
     border-radius: 5px;
 
 }
@@ -50,11 +60,7 @@ label {
     margin: 0.5rem 0 0.5rem 0;
 }
 
-.margin{
-    margin-bottom: 1rem;
-}
-
-.sqre {
+.btn--container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,10 +75,11 @@ label {
 input {
     height: 1.5rem;
     margin-bottom: 1rem;
-    border: none;
+    border: 1px solid rgb(3, 41, 41);
     border-radius: 0.4rem;
-    background-color: rgb(213, 230, 237);
+    background-color: rgb(225, 225, 225);
     padding: 0 1rem 0 1rem;
+    color: rgb(3, 41, 41);
 }
 .chooseUpdate {
 display: flex;
@@ -96,69 +103,7 @@ main {
     align-items: center;
     height: 100vh;
     width: 90%;
-}
-/* 
-.mainHeader{
-    margin: 1rem;
-    color: rgb(213, 230, 237);
-}
-
-.thead{
-    text-align: left;
-    background-color: rgba(240, 253, 253, 0.384);
-    color: yellow;
-}
-
-.th--styling{
-    padding: 0.5rem 0rem 0.5rem 1rem;
-}
-
-.th--styling2 {
-    background-color: rgb(30, 70, 93);
-}
-
-.songTable{
-    width: 50rem;
-}
-
-.td--styling {
-    padding: 0.5rem 0rem 0.5rem 1rem;
-}
-
-.td--id {
-    color: hotpink;
-    padding: 0.5rem 0rem 0.5rem 1rem;
-}
-
-.tr--body:nth-child(odd) {
-    background-color: rgb(240, 253, 253);
-    color: rgb(30, 70, 93);
-}
-
-.allSongs {
-    padding: 2rem;
-    background-color: rgb(30, 70, 93);
-    border: 1px solid rgb(22, 191, 191);
-    border-radius: 1rem;
-    color: rgb(22, 191, 191);
-}
-
-.edit {
-    background-color: rgb(22, 191, 191);
-    border-radius: 1rem;
-    color: black;
-} */
-
-/* .allSongs {
-
-    border: 1px solid rgb(240, 253, 253);
-    border-radius: 1rem 1rem 0 0;
-
-} */
-.mainHeader {
-    color: hotpink;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-left: 18rem
 }
 
 .header {
@@ -166,39 +111,37 @@ display: flex;
 flex-direction: row;
 align-items: center;
 padding-left: 1rem;
-background-color: rgba(240, 253, 253, 0.736);
+background-color: rgb(3, 41, 41);
 border-radius: 1rem 1rem 0  0;
-color: rgb(30, 70, 93);
+color: yellow;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10pt;
 }
 
-.tr--body {
+.allSongs {
+    margin-top: 2rem;
+}
+
+.songUl {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-/*     padding: 3rem; */
-/*     border: 1px solid rgb(22, 191, 191); */
-/*     width:59rem;
-    height: 30rem; */
 }
-.td--li {
+
+.li--container {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
-/*     gap: 2rem;
-    background-color: aqua;
-    width: 10rem;
-    height: 4rem;
-    border: 1px solid black; */
 }
 
-.td--li:nth-child(odd){
+.li--container:nth-child(odd){
     background-color: rgb(30, 70, 93);
     color: rgb(240, 253, 253);
 }
 
-.td--li:nth-child(even){
+.li--container:nth-child(even){
     background-color: rgb(22, 191, 191);
     color: rgb(18, 44, 58);
     padding-left: 1rem;
@@ -209,22 +152,18 @@ color: rgb(30, 70, 93);
 .td--id {
     padding: 0.8rem 0 0.5rem 0;
     width: 7rem;
-/*     border: 1px solid rgb(177, 45, 45); */
 
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .td--title{
     width: 18rem;
-/*     border: 1px solid rgb(177, 45, 45); */
 }
 .td--artist{
     width: 22rem;
-/*     border: 1px solid rgb(177, 45, 45); */
 }
 .td--year{
     width:3rem;
-/*     border: 1px solid rgb(177, 45, 45); */
 }
 
 .td--button {
