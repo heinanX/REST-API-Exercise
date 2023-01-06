@@ -2,16 +2,32 @@ GET http://localhost:3000/songs
 
 ###
 
-GET http://localhost:3000/songs/5555
+GET http://localhost:3000/songs/get/5555
 
 ###
 
 POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+    "title": "Leave a Light On",
+    "artist": "Tom Walker",
+    "year": 2022,
+    "id": 1726263
+}
 
 ###
 
-PUT http://localhost:3000/songs/1210972
+PUT http://localhost:3000/songs/5555
+Content-Type: application/json
+
+{
+    "title": "I've got you babe",
+    "artist": "Sonny & Cher",
+    "year": 1252,
+    "id": 1
+}
 
 ###
 
-DELETE http://localhost:3000/songs/1210972
+DELETE http://localhost:3000/songs/3290637

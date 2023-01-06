@@ -1,92 +1,74 @@
 [
   {
-    "Title": "You Don't Have To Say You Love Me",
-    "Artist": "Dusty Springfield",
-    "Year": 1966,
-    "Genre": "Pop",
+    "title": "You Don't Have To Say You Love Me",
+    "artist": "Dusty Springfield",
+    "year": 1966,
     "id": 1
   },
   {
-    "Title": "Linger",
-    "Artist": "The Cranberries",
-    "Year": 1993,
-    "Genre": [
-      "Indie",
-      "Rock",
-      "Alternative"
-    ],
-    "id": 2373
+    "title": "Linger",
+    "artist": "The Cranberries",
+    "year": "1993",
+    "id": 1221
   },
   {
-    "Title": "California Dreamin'",
-    "Artist": "The Mamas & The Papas",
-    "Year": 1965,
-    "Genre": [
-      "Indie",
-      "Folk rock",
-      "Pop"
-    ],
+    "title": "California Dreamin'",
+    "artist": "The Mamas & The Papas",
+    "year": 1965,
     "id": 5555
   },
   {
-    "Title": "Check Yes Juliet",
-    "Artist": "We the Kings",
-    "Year": 2007,
-    "Genre": [
-      "Indie",
-      "Alternative"
-    ],
+    "title": "Check Yes Juliet",
+    "artist": "We the Kings",
+    "year": 2007,
     "id": 3934
   },
   {
-    "Title": "The Beginning",
-    "Artist": "One Ok Rock",
-    "Year": 2013,
-    "Genre": [
-      "Indie",
-      "Rock"
-    ],
+    "title": "The Beginning",
+    "artist": "One Ok Rock",
+    "year": 2013,
     "id": 1383845
   },
   {
-    "Title": "Summertime",
-    "Artist": "My Chemical Romande",
-    "Year": 2010,
-    "Genre": [
-      "Indie",
-      "Rock",
-      "Alternative"
-    ],
+    "title": "Summertime",
+    "artist": "My Chemical Romande",
+    "year": 2010,
     "id": 8563522
   },
   {
-    "Title": "SELF-SABOTAGE",
-    "Artist": [
-      "Waterparks",
-      "Good Charlotte"
-    ],
-    "Year": 2022,
-    "Genre": [
-      "Indie",
-      "Alternative"
-    ],
+    "title": "SELF-SABOTAGE",
+    "artist": "Waterparks (ft. Good Charlotte)",
+    "year": 2022,
     "id": 9567497
   },
   {
-    "Title": "How Do I Say Goodbye",
-    "Artist": "Dean Lewis",
-    "Year": 2022,
-    "Genre": [
-      "Indie",
-      "Pop"
-    ],
+    "title": "How Do I Say Goodbye",
+    "artist": "Dean Lewis",
+    "year": 2022,
     "id": 2839208
   },
   {
-    "Title": "Oops! ...I Did It Again",
-    "Artist": "Britney Spears",
-    "Year": 2000,
-    "Genre": "Pop",
+    "title": "Oops! ...I Did It Again",
+    "artist": "Britney Spears",
+    "year": 2000,
     "id": 8219617
+  },
+  {
+    "title": "Lifestyles of the Rich and Famous",
+    "artist": "Good Charlotte",
+    "year": "2002",
+    "id": 18656308
+  },
+  {
+    "title": "Mighty Long Fall",
+    "artist": "One Ok Rock",
+    "year": "2014",
+    "id": 18692384
+  },
+  {
+    "title": "Oh! Carol",
+    "artist": "Neil Sedaka",
+    "year": "1961",
+    "id": 97997383
   }
 ]

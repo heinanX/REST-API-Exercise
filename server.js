@@ -6,6 +6,7 @@ const app = express();
 const fs = require('fs');
 
 app.use(cors())
+app.use(express.json())
 
 //--------- STARTS SERVER ---------\\
 
@@ -27,7 +28,7 @@ app.get('/songs', (req, res) => {
 
 //--------- Collects specified object from json file ---------\\
 
-app.get('/songs/:songId', (req, res) => {
+app.get('/songs/get/:songId', (req, res) => {
 
   fs.readFile('songs.json', (err, data) => {
     if (err) { res.status(404).send(`Unable to read source file. See ${err}`) }
@@ -54,32 +55,10 @@ app.post('/songs', (req, res) => {
 
     const songs = JSON.parse(data);
 
-    //----  Generate an id number  ----\\
-
-    function createId() {
-      let num = Math.floor(Math.random() * 10000000);
-
-      if (!(songs.find(element => element.id == num))) {
-        return num; 
-      } else {
-          createId()
-        }
-    }
-
-    //---- Creates new object in array ----\\
-
-    let newSong =
-    {
-      "Title": "Oops! I Did It Again",
-      "Artist": "Britney Spears",
-      "Year": 1999,
-      "Genre": "pop",
-      "id": createId()
-    }
-
+    
     //---- Pushes new object to songs array ----\\
-
-    songs.push(newSong);
+    console.log(req.body)
+    songs.push(req.body);
 
     //---- Overwrites json file with updated array ----\\
 
@@ -105,7 +84,7 @@ app.put('/songs/:songId', (req, res) => {
     if (song) {
       const newArr = songs.map(item => {
         if (item.id == id) {
-          return { ...item, Artist: 'THIS IS REPLACEMENT TEXT 2' }
+          return req.body
         } return item;
       });
 
