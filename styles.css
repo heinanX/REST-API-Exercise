@@ -177,3 +177,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 .nudge {
     margin-top: 1rem;
 }
+
+.warning {
+    color: yellow;
+}

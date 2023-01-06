@@ -1,5 +1,11 @@
 [
   {
+    "title": "You Don't Have To Say You Love Me",
+    "artist": "Dusty Springfield",
+    "year": "1966",
+    "id": 1
+  },
+  {
     "title": "Linger",
     "artist": "The Cranberries",
     "year": "1993",
@@ -8,7 +14,7 @@
   {
     "title": "California Dreamin'",
     "artist": "The Mamas & The Papas",
-    "year": 1965,
+    "year": "1965",
     "id": 5555
   },
   {
@@ -76,11 +82,5 @@
     "artist": "Kent",
     "year": "2005",
     "id": 111675913
-  },
-  {
-    "title": "bajs",
-    "artist": "bajs",
-    "year": "1999",
-    "id": 114185758
   }
 ]
