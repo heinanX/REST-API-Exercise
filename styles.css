@@ -47,17 +47,12 @@ aside {
 margin-top: 1rem;
 }
 
-.aside--div {
+.aside--divs {
     background-color: rgb(12, 155, 155);
     padding: 0 0.5rem 1rem 0.5rem;
     margin-bottom: 1rem;
     border-radius: 5px;
 
-}
-
-label {
-    text-align: center;
-    margin: 0.5rem 0 0.5rem 0;
 }
 
 .btn--container {
@@ -67,9 +62,14 @@ label {
 
 }
 
-.sqre-btn {
+.sqre-btns {
     width: 6rem;
     height: 2rem;
+}
+
+label {
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
 }
 
 input {
@@ -81,19 +81,12 @@ input {
     padding: 0 1rem 0 1rem;
     color: rgb(3, 41, 41);
 }
-.chooseUpdate {
+
+/* .chooseUpdate {
 display: flex;
 flex-direction: row;
 justify-content: space-between;
-}
-
-.dropdown {
-    height: 1.5rem;
-}
-
-.shrink {
-    width: 7.5rem;
-}
+} */
 
 /* ----------------------------------------------------------- */
 
@@ -136,12 +129,12 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.li--container:nth-child(odd){
+.li--container:nth-child(odd) {
     background-color: rgb(30, 70, 93);
     color: rgb(240, 253, 253);
 }
 
-.li--container:nth-child(even){
+.li--container:nth-child(even) {
     background-color: rgb(22, 191, 191);
     color: rgb(18, 44, 58);
     padding-left: 1rem;
@@ -150,20 +143,23 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .td--id {
-    padding: 0.8rem 0 0.5rem 0;
     width: 7rem;
+    padding: 0.8rem 0 0.5rem 0;
 
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.td--title{
-    width: 18rem;
+.td--title {
+    width: 21rem;
+    padding-left: 1rem;
 }
-.td--artist{
-    width: 22rem;
+.td--artist {
+    width: 20rem;
+    padding-left: 1rem;
 }
-.td--year{
+.td--year {
     width:3rem;
+    padding-left: 1rem;
 }
 
 .td--button {
@@ -173,6 +169,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 .edit {
     margin-top: 2rem;
+    
     border: 1px solid rgb(22, 191, 191);
     background-color: rgb(213, 230, 237);
 }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Ultimate List of Songs top 100</title>
+    <title>List of Ultimate Songs of All Time</title>
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
@@ -15,33 +15,33 @@
         <h1 class="aside--h1">Ultimate Songs</h1>
         <h1 class="aside--h1">of All Time</h1>
 
-        <div class="centered top--div margin aside--div">
-            <label for="">Display full directory or random:</label>
+        <div class="centered top--div margin aside--divs">
+            <label for="Displaying songs">Display full directory or random:</label>
             <div class="btn--container">
-                <button class="sqre-btn"  onclick="displayAll()">Display all</button>
+                <button class="sqre-btns"  onclick="displayAll()">Display all</button>
                 <br>
-                <button class="sqre-btn" onclick="displayRandom()">Randomise</button>
+                <button class="sqre-btns" onclick="displayRandom()">Randomise</button>
             </div>
         </div>
 
-        <div class="centered margin aside--div">
-            <label for="">Look up by ID or Artist:</label>
+        <div class="centered margin aside--divs">
+            <label for="Id or Artist">Look up by ID or Artist:</label>
             <input id="displayID" type="text" placeholder="Enter Song ID or Artist">
             <div class="btn--container">
-                <button class="sqre-btn" onclick="displayID()">Search ID</button>
-                <button class="sqre-btn" onclick="lookUpID()">Search Arist</button>
+                <button class="sqre-btns" onclick="displayID()">Search ID</button>
+                <button class="sqre-btns" onclick="lookUpID()">Search Arist</button>
             </div>
         </div>
 
-        <div class="centered margin aside--div">
-            <label for="">Delete song from list</label>
+        <div class="centered margin aside--divs">
+            <label for="deleting song">Delete song from list</label>
             <input id="deleteID" type="text" placeholder="Enter Song ID">
             <button type="button" onclick="deleteID()">I banish thee!</button>
         </div>
 
 
-        <div class="centered margin aside--div">
-            <label for="">Add song to list</label>
+        <div class="centered margin aside--divs">
+            <label for="Adding song">Add song to list</label>
             <input id="createID--title"type="text" placeholder="Enter Title">
             <input id="createID--artist"type="text" placeholder="Enter Artist">
             <input id="createID--year"type="text" placeholder="Enter Year">

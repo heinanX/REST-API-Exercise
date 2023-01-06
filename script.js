@@ -1,5 +1,5 @@
-const allSongs = document.querySelector(".allSongs");
-const songUl = document.createElement("ul")
+const allSongs = document.querySelector('.allSongs');
+const songUl = document.createElement('ul')
 songUl.setAttribute('class', 'songUl')
 const warning = document.createElement('h2')
 warning.setAttribute('class', 'warning')
@@ -11,31 +11,32 @@ async function displayAll() {
     const response = await fetch('http://localhost:3000/songs');
     const data = await response.json()
 
-    songUl.innerHTML = ""
+    songUl.innerHTML = ''
 
     data.forEach(element => {
-        const liContainer = document.createElement("li")
+        const liContainer = document.createElement('li')
         liContainer.setAttribute('class', 'li--container')
-        const title = document.createElement("p")
+        const title = document.createElement('p')
         title.setAttribute('class', 'td--title')
-        const artist = document.createElement("p")
+        const artist = document.createElement('p')
         artist.setAttribute('class', 'td--artist')
-        const id = document.createElement("p")
+        const id = document.createElement('p')
         id.setAttribute('class', 'td--id')
-        const year = document.createElement("p")
+        const year = document.createElement('p')
         year.setAttribute('class', 'td--year')
-        const editButton = document.createElement("button")
+        const editButton = document.createElement('button')
         editButton.setAttribute('class', 'td--button')
         
         editButton.addEventListener('click', function() {
             changeSong(element)
         })
 
-        editButton.innerHTML = "edit"
+        editButton.innerHTML = 'edit'
         title.innerHTML = element.title
         artist.innerHTML = element.artist
         id.innerHTML = element.id
         year.innerHTML = element.year
+
         liContainer.append(id, artist, title, year, editButton)
         songUl.append(liContainer)
         allSongs.append(songUl)
@@ -45,20 +46,20 @@ async function displayAll() {
 displayAll()
 
 async function displayRandom() {
-    songUl.innerHTML = ""
+    songUl.innerHTML = ''
 
     const response = await fetch(`http://localhost:3000/songs`);
     const data = await response.json()
 
-    const liContainer = document.createElement("li")
+    const liContainer = document.createElement('li')
         liContainer.setAttribute('class', 'li--container')
-        const title = document.createElement("p")
+        const title = document.createElement('p')
         title.setAttribute('class', 'td--title')
-        const artist = document.createElement("p")
+        const artist = document.createElement('p')
         artist.setAttribute('class', 'td--artist')
-        const id = document.createElement("p")
+        const id = document.createElement('p')
         id.setAttribute('class', 'td--id')
-        const year = document.createElement("p")
+        const year = document.createElement('p')
         year.setAttribute('class', 'td--year')
 
     let num = Math.floor(Math.random() * data.length);
@@ -68,6 +69,7 @@ async function displayRandom() {
         artist.innerHTML = song.artist
         id.innerHTML = song.id
         year.innerHTML = song.year
+
         liContainer.append(id, artist, title, year)
         songUl.append(liContainer)
         allSongs.append(songUl)
@@ -75,30 +77,30 @@ async function displayRandom() {
 }
 
 async function displayID() {
-    songUl.innerHTML = ""
+    songUl.innerHTML = ''
     const displayID = document.getElementById('displayID').value
 
     const response = await fetch(`http://localhost:3000/songs/get/${displayID}`);
     const data = await response.json()
     
-    const liContainer = document.createElement("li")
+    const liContainer = document.createElement('li')
     liContainer.setAttribute('class', 'li--container')
-    const title = document.createElement("p")
+    const title = document.createElement('p')
     title.setAttribute('class', 'td--title')
-    const artist = document.createElement("p")
+    const artist = document.createElement('p')
     artist.setAttribute('class', 'td--artist')
-    const id = document.createElement("p")
+    const id = document.createElement('p')
     id.setAttribute('class', 'td--id')
-    const year = document.createElement("p")
+    const year = document.createElement('p')
     year.setAttribute('class', 'td--year')
-    const editButton = document.createElement("button")
+    const editButton = document.createElement('button')
     editButton.setAttribute('class', 'td--button')
 
     editButton.addEventListener('click', function() {
         changeSong(data)
     })
 
-    editButton.innerHTML = "edit"
+    editButton.innerHTML = 'edit'
     title.innerHTML = data.title
     artist.innerHTML = data.artist
     id.innerHTML = data.id
@@ -110,7 +112,7 @@ async function displayID() {
 }
 
 async function lookUpID() {
-    songUl.innerHTML = ""
+    songUl.innerHTML = ''
     const displayID = document.getElementById('displayID')
 
     const response = await fetch(`http://localhost:3000/songs`);
@@ -121,28 +123,29 @@ async function lookUpID() {
 
     if (songs.length > 0) {
         songs.forEach(element => {
-        const liContainer = document.createElement("li")
+        const liContainer = document.createElement('li')
         liContainer.setAttribute('class', 'li--container')
-        const title = document.createElement("p")
+        const title = document.createElement('p')
         title.setAttribute('class', 'td--title')
-        const artist = document.createElement("p")
+        const artist = document.createElement('p')
         artist.setAttribute('class', 'td--artist')
-        const id = document.createElement("p")
+        const id = document.createElement('p')
         id.setAttribute('class', 'td--id')
-        const year = document.createElement("p")
+        const year = document.createElement('p')
         year.setAttribute('class', 'td--year')
-        const editButton = document.createElement("button")
+        const editButton = document.createElement('button')
         editButton.setAttribute('class', 'td--button')
 
         editButton.addEventListener('click', function() {
             changeSong(element)
         })
 
-        editButton.innerHTML = "edit"
+        editButton.innerHTML = 'edit'
         title.innerHTML = element.title
         artist.innerHTML = element.artist
         id.innerHTML = element.id
         year.innerHTML = element.year
+
         liContainer.append(id, artist, title, year, editButton)
         songUl.append(liContainer)
         allSongs.append(songUl)
@@ -155,7 +158,7 @@ async function lookUpID() {
         allSongs.append(songUl)
     }
    
-    displayID.value = ""
+    displayID.value = ''
 
 }
 
@@ -190,7 +193,7 @@ async function createID() {
 }
 
 async function changeSong(songId) {
-    songUl.innerHTML = ""
+    songUl.innerHTML = ''
 
     const liContainer = document.createElement('li')
     liContainer.setAttribute('class', 'li--container')
@@ -202,19 +205,20 @@ async function changeSong(songId) {
     id.setAttribute('class', 'td--id nudge')
     const year = document.createElement('input')
     year.setAttribute('class', 'td--year edit')
-    year.setAttribute("type", "number")
-    const saveButton = document.createElement("button")
+    year.setAttribute('type', 'number')
+    const saveButton = document.createElement('button')
     saveButton.setAttribute('class', 'td--button nudge')
 
     saveButton.addEventListener('click', function() {
         saveSong(songId.id, artist, title, year)
     })
 
-    saveButton.innerHTML = "save"
+    saveButton.innerHTML = 'save'
     title.value = songId.title
     artist.value = songId.artist
     id.innerHTML = songId.id
     year.value = songId.year
+
     liContainer.append(id, artist, title, year, saveButton)
     songUl.append(liContainer)
     allSongs.append(songUl)
