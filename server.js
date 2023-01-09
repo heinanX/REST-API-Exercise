@@ -57,7 +57,6 @@ app.post('/songs', (req, res) => {
 
     
     //---- Pushes new object to songs array ----\\
-    console.log(req.body)
     songs.push(req.body);
 
     //---- Overwrites json file with updated array ----\\

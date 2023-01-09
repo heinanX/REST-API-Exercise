@@ -153,7 +153,7 @@ async function lookUpID() {
         })
 
     } else {
-        warning.innerHTML = "Bye bye bye";
+        warning.innerHTML = "Unknown Artist. Check spelling.";
         songUl.append(warning);
         allSongs.append(songUl);
     }
@@ -222,10 +222,6 @@ async function changeSong(songId) {
     liContainer.append(id, artist, title, year, saveButton);
     songUl.append(liContainer);
     allSongs.append(songUl);
-
-
-    console.log(songId);
-
 }
 
 async function saveSong(songId, artist, title, year) {
