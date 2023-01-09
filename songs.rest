@@ -12,8 +12,8 @@ Content-Type: application/json
 {
     "title": "Leave a Light On",
     "artist": "Tom Walker",
-    "year": 2022,
-    "id": 1726263
+    "year": "2022",
+    "id": 102663
 }
 
 ###
@@ -22,10 +22,10 @@ PUT http://localhost:3000/songs/5555
 Content-Type: application/json
 
 {
-    "title": "I've got you babe",
-    "artist": "Sonny & Cher",
-    "year": 1252,
-    "id": 1
+    "title": "Insert title here",
+    "artist": "Insert Name here",
+    "year": "Insert date here",
+    "id": 5555
 }
 
 ###

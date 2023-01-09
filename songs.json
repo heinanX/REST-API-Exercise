@@ -20,67 +20,79 @@
   {
     "title": "Check Yes Juliet",
     "artist": "We the Kings",
-    "year": 2007,
-    "id": 3934
+    "year": "2007",
+    "id": 113934
   },
   {
     "title": "The Beginning",
     "artist": "One Ok Rock",
     "year": "2013",
-    "id": 1383845
+    "id": 102384
   },
   {
     "title": "Summertime",
     "artist": "My Chemical Romande",
-    "year": 2010,
-    "id": 8563522
+    "year": "2010",
+    "id": 102352
   },
   {
     "title": "SELF-SABOTAGE",
     "artist": "Waterparks (ft. Good Charlotte)",
-    "year": 2022,
-    "id": 9567497
+    "year": "2022",
+    "id": 123749
   },
   {
     "title": "How Do I Say Goodbye",
     "artist": "Dean Lewis",
-    "year": 2022,
-    "id": 2839208
+    "year": "2022",
+    "id": 123920
   },
   {
     "title": "Oops! ...I Did It Again",
     "artist": "Britney Spears",
-    "year": 2000,
-    "id": 8219617
+    "year": "2000",
+    "id": 121961
   },
   {
     "title": "Lifestyles of the Rich and Famous",
     "artist": "Good Charlotte",
     "year": "2002",
-    "id": 18656308
+    "id": 106563
   },
   {
     "title": "Mighty Long Fall",
     "artist": "One Ok Rock",
     "year": "2014",
-    "id": 18692384
+    "id": 106923
   },
   {
     "title": "Oh! Carol",
     "artist": "Neil Sedaka",
     "year": "1961",
-    "id": 97997383
+    "id": 119973
   },
   {
     "title": "Silver",
     "artist": "Kent",
     "year": "2016",
-    "id": 111415594
+    "id": 111415
   },
   {
     "title": "400 Slag",
     "artist": "Kent",
     "year": "2005",
-    "id": 111675913
+    "id": 111675
+  },
+  {
+    "title": "Don't Delete The Kisses",
+    "artist": "Wolf Alice",
+    "year": "2017",
+    "id": 124000
+  },
+  {
+    "title": "Sweet Home",
+    "artist": "SYML",
+    "year": "2023",
+    "id": 363786
   }
 ]
